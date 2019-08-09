@@ -3,14 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import {VideojuegoComponent} from './videojuego/videoJuego.component';
+
+// este decoador nos ayuda a configurar el modulo
 @NgModule({
+  // en declarations cargamos los componenetes
   declarations: [
-    AppComponent
+    AppComponent,
+    VideojuegoComponent
   ],
+  // cargamos modulos de angular o externos
   imports: [
     BrowserModule
   ],
+  // cargar servicios
   providers: [],
+  // el componenete o modulo principal a cargar
   bootstrap: [AppComponent]
 })
 export class AppModule { }
