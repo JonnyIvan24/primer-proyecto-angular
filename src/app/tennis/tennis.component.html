@@ -1,1 +1,8 @@
 <h2>{{titulo}}</h2>
+<div>
+    <ul>
+        <li *ngFor="let tenni of tennis">
+            {{tenni.nombre}} - <strong>${{tenni.precio}}</strong>
+        </li>
+    </ul>
+</div>
