@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 
 import {VideojuegoComponent} from './videojuego/videoJuego.component';
 import {TennisComponent} from './tennis/tennis.component';
+import { CursosComponent } from './cursos/cursos.component';
 
 // este decoador nos ayuda a configurar el modulo
 @NgModule({
@@ -12,7 +13,8 @@ import {TennisComponent} from './tennis/tennis.component';
   declarations: [
     AppComponent,
     VideojuegoComponent,
-    TennisComponent
+    TennisComponent,
+    CursosComponent
   ],
   // cargamos modulos de angular o externos
   imports: [

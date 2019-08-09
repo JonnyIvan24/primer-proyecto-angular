@@ -9,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'aprendiendo Angular';
+  public title = 'aprendiendo Angular';
+  public mostrar: boolean = true;
+
+  ocultarVideojuegos(value: boolean) {
+    this.mostrar = value;
+  }
 }
