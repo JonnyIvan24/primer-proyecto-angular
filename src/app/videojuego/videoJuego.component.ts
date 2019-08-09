@@ -2,17 +2,17 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'videojuego',
-    template: `
-        <h2>Componenete del videojuego</h2>
-        <ul>
-            <li>GTA</li>
-            <li>Tekken</li>
-            <li>Mario</li>
-        </ul>
-    `,
+    templateUrl: './videojuego.component.html',
 })
-export class VideojuegoComponent{
-    constructor(){
-        console.log('se a cargado el componente videojuego');
+export class VideojuegoComponent {
+    // propiedades
+    public titulo: string;
+    public listado: string;
+
+    constructor() {
+        this.titulo = 'Componenete de videojuegos';
+        this.listado = 'Listado de videojuegos';
+
+        console.log('Se a cargado el componente videojuego');
     }
 }
