@@ -1,6 +1,6 @@
 export let configuracion = {
     color:          'red',
-    fondo:          'blue',
+    fondo:          'gray',
     titulo:         'Aplicación en Angular',
     descripcion:    'Aplicación para aprender angular'
 };

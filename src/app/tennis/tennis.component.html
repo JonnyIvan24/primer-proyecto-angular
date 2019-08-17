@@ -1,8 +1,29 @@
 <h2>{{titulo}}</h2>
 <div>
+    <p>Marcas:</p>
+    <ul>
+        <!-- directiva for -->
+        <li *ngFor="let marca of marcas; let indice = index">{{indice + ' ' + marca}}</li>
+    </ul>
+    <p>Tennis:</p>
     <ul>
         <li *ngFor="let tenni of tennis">
             {{tenni.nombre}} - <strong>${{tenni.precio}}</strong>
+            <!-- directiva condición if -->
+            <span *ngIf="tenni.precio <= 1300" 
+            [style.background]="tenni.precio <= 1300 ? 'green' : 'transparent'"
+            [style.color]="tenni.precio <= 1300 ? 'white' : 'black'">
+                ¡En oferta!
+            </span>
         </li>
+    </ul>
+    <p>
+        El color de la mayoría de los tennis es:
+    </p>
+    <!-- directiva condición switch -->
+    <ul [ngSwitch]="color">
+        <li *ngSwitchCase="'yellow'">Blanco</li>
+        <li *ngSwitchCase="'blue'">Azul</li>
+        <li *ngSwitchDefault>blanco</li>
     </ul>
 </div>
