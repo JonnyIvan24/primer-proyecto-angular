@@ -11,7 +11,7 @@ export class VideojuegoComponent implements OnInit, DoCheck, OnDestroy {
 
     // se ejecuta al momento de crear el componente (siempre es primero)
     constructor() {
-        this.titulo = 'Componenete de videojuegos';
+        this.titulo = 'Componente de videojuegos';
         this.listado = 'Listado de videojuegos';
 
         console.log('Se a cargado el componente videojuego');

@@ -1,4 +1,15 @@
 <h2>{{titulo}}</h2>
+<p>Añadir marca</p>
+<div>
+    <!-- no olvidar que se necesita importar FormsModule en el app.module.ts de nuestra aplicación -->
+    <!-- los datos son reactivos dentro de nuestro componente data-binding -->
+    <input type="text" [(ngModel)]="miMarca">
+    <button (click)="getMarca()">Mostrar marca</button>
+    <button (click)="addMarca()">Guardar marca</button>
+
+</div>
+<p>Contenido del input:</p>
+<strong>{{miMarca}}</strong>
 <div>
     <p>Marcas:</p>
     <ul>

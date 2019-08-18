@@ -12,6 +12,7 @@ export class TennisComponent implements OnInit {
     public tennis: Array<Tenni>;
     public marcas: string[];
     public color: string;
+    public miMarca: string;
 
     constructor() {
         this.marcas = new Array();
@@ -21,6 +22,7 @@ export class TennisComponent implements OnInit {
             new Tenni('Nike Runner', 'Nike', 'Rojos', 1200.00, true)
         ];
         this.color = 'blue';
+        this.miMarca = 'Nike';
         this.getMarcas();
     }
 
@@ -35,5 +37,13 @@ export class TennisComponent implements OnInit {
                 this.marcas.push(tenni.marca);
             }
         });
+    }
+
+    getMarca() {
+        alert(this.miMarca);
+    }
+
+    addMarca() {
+        this.marcas.push(this.miMarca);
     }
 }
