@@ -46,4 +46,17 @@ export class TennisComponent implements OnInit {
     addMarca() {
         this.marcas.push(this.miMarca);
     }
+
+    deleteMarca(indice: number) {
+        // delete this.marcas[indice];
+        this.marcas.splice(indice, 1);
+    }
+
+    onBlur() {
+        console.log('Has salido del input "Evento blur"');
+    }
+
+    mostrarPalabra() {
+        this.getMarca();
+    }
 }
