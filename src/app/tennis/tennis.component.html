@@ -21,8 +21,16 @@
     </ul>
     <p>Tennis:</p>
     <ul>
+        <!-- ngclass con atributos  ejemplo[class.Precio] sirve para insertar una clase en caso de que se cumpla una condición -->
+        <!-- ngclass  ejemplo[ngClass] sirve para insertar una o varias clases cada que se cumpla una condición-->
         <li *ngFor="let tenni of tennis">
-            {{tenni.nombre}} - <strong>${{tenni.precio}}</strong>
+            {{tenni.nombre}} - <strong [class.altoPrecio]="tenni.precio >= 1300"
+                                [ngClass]="{
+                                    'fondoRojo': tenni.precio > 1300,
+                                    'subrayado': tenni.marca == 'Nike'
+                                }">
+                                    ${{tenni.precio}}
+                                </strong>
             <!-- directiva condición if -->
             <span *ngIf="tenni.precio <= 1300" 
             [style.background]="tenni.precio <= 1300 ? 'green' : 'transparent'"
