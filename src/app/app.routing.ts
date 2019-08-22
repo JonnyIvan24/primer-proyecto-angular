@@ -16,11 +16,15 @@ const appRoutes: Routes = [
     component: HomeComponent
   },
   {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
     path: 'tennis',
     component: TennisComponent
   },
   {
-    path: 'videojuego',
+    path: 'videojuegos',
     component: VideojuegoComponent
   },
   {

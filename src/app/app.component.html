@@ -8,6 +8,16 @@
         </h1>
         <h3>{{descripcion}}</h3>
       </div>
+      <nav>
+        <a [routerLink]="[ '/home' ]" routerLinkActive="active">Home</a>
+        &nbsp;
+        <a [routerLink]="[ '/tennis' ]" routerLinkActive="active">Tennis</a>
+        <!-- <a [routerLink]="[ '/tennis' ]" [routerLinkActive]="['active']">Tennis</a> -->
+        &nbsp;
+        <a [routerLink]="[ '/cursos' ]" routerLinkActive="active'">Cursos</a>
+        &nbsp;
+        <a [routerLink]="[ '/videojuegos' ]" routerLinkActive="active">Videojuegos</a>
+      </nav>
       <!-- <div>
         <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar">Ocultar</button>
         <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar">Mostrar</button>
