@@ -1,1 +1,14 @@
-<p>home works!</p>
+<h2>Página principal</h2>
+
+<!-- en el else ponemos la variable que contiene nuestro elemento de la plantilla html -->
+<div *ngIf="identificado; else noIdentificado">
+    <h3>Estas identificado en la app</h3>
+    <button (click)="unsetIdentificado()">Borrar identificación</button>
+</div>
+
+<!-- # nos sirve para crear una variable en la plantilla -->
+<ng-template #noIdentificado>
+    <h3>No estas identificado, pulsa el botón para identificarte</h3>
+    <button (click)="setIdentificado()">Identificar</button>
+</ng-template>
+
