@@ -1,10 +1,12 @@
 <h2>Página principal</h2>
 
-<!-- en el else ponemos la variable que contiene nuestro elemento de la plantilla html -->
-<div *ngIf="identificado; else noIdentificado">
+<!-- en un div o ng-container ponemos la condición -->
+<div *ngIf="identificado; then siIdentificado; else noIdentificado"></div>
+
+<ng-template #siIdentificado>
     <h3>Estas identificado en la app</h3>
     <button (click)="unsetIdentificado()">Borrar identificación</button>
-</div>
+</ng-template>
 
 <!-- # nos sirve para crear una variable en la plantilla -->
 <ng-template #noIdentificado>
