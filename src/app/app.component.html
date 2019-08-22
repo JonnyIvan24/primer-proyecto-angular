@@ -8,12 +8,15 @@
         </h1>
         <h3>{{descripcion}}</h3>
       </div>
-      <div>
+      <!-- <div>
         <button (click)="ocultarVideojuegos(false)" *ngIf="mostrar">Ocultar</button>
         <button (click)="ocultarVideojuegos(true)" *ngIf="!mostrar">Mostrar</button>
       
         <videojuego *ngIf="mostrar"></videojuego>
         <tennis></tennis>
         <app-cursos></app-cursos>
+      </div> -->
+      <div>
+        <router-outlet></router-outlet>
       </div>
 </div>
