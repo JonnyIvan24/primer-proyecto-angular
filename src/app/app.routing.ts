@@ -31,6 +31,15 @@ const appRoutes: Routes = [
     path: 'cursos',
     component: CursosComponent
   },
+  // ruta con parametros
+  {
+    path: 'cursos/:nombre',
+    component: CursosComponent
+  },
+  {
+    path: 'cursos/:nombre/:followers',
+    component: CursosComponent
+  },
   // la ruta 404 siempre va declarada en ultimo lugar
   {
     path: '**',
