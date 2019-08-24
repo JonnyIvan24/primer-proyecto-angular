@@ -1,5 +1,10 @@
 <input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()">
 
+<!-- se puede tener un texto o animación para haceer el efecto de carga, según el nivel de detalle que queramos -->
+<div *ngIf="!user">
+    cargando...
+</div>
+
 <div *ngIf="user">
     <img src="{{user.avatar}}" width="200px" alt="">
     <h2>{{user.first_name + ' ' + user.last_name}}</h2>
