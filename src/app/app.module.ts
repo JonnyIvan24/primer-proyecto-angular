@@ -7,6 +7,9 @@ import { FormsModule } from '@angular/forms';
 // modulo de routing
 import {routing, appRoutingProviders} from './app.routing';
 
+// modulo para peticiones http
+import {HttpClientModule} from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 
 import {VideojuegoComponent} from './videojuego/videoJuego.component';
@@ -14,6 +17,7 @@ import {TennisComponent} from './tennis/tennis.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { from } from 'rxjs';
+import { ExternoComponent } from './externo/externo.component';
 
 // este decorador nos ayuda a configurar el modulo
 @NgModule({
@@ -23,13 +27,15 @@ import { from } from 'rxjs';
     VideojuegoComponent,
     TennisComponent,
     CursosComponent,
-    HomeComponent
+    HomeComponent,
+    ExternoComponent
   ],
   // cargamos modulos de angular o externos
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    routing,
+    HttpClientModule
   ],
   // cargar servicios
   providers: [

@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { TennisComponent } from './tennis/tennis.component';
 import { VideojuegoComponent } from './videojuego/videoJuego.component';
 import { CursosComponent } from './cursos/cursos.component';
+import { ExternoComponent } from './externo/externo.component';
 
 // rutas
 
@@ -39,6 +40,10 @@ const appRoutes: Routes = [
   {
     path: 'cursos/:nombre/:followers',
     component: CursosComponent
+  },
+  {
+    path: 'externo',
+    component: ExternoComponent
   },
   // la ruta 404 siempre va declarada en ultimo lugar
   {

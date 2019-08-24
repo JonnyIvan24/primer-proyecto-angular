@@ -2,9 +2,14 @@ import { Component, OnInit } from '@angular/core';
 
 import {Tenni} from '../models/tenni';
 
+// importar el provider o servicio
+import {TennisService} from '../services/tennis.service';
+
 @Component({
     selector: 'tennis',
-    templateUrl: './tennis.component.html'
+    templateUrl: './tennis.component.html',
+    // se injecta como un servicio del componenete
+    providers: [TennisService]
 })
 export class TennisComponent implements OnInit {
 
@@ -14,21 +19,19 @@ export class TennisComponent implements OnInit {
     public color: string;
     public miMarca: string;
 
-    constructor() {
+    // se injecta el servicio en los parametros del constructor declarando una variable del mismo tipo que el servicio
+    constructor(
+        private _tennisService: TennisService
+    ) {
         this.marcas = new Array();
-        this.tennis = [
-            new Tenni('Rebook classic', 'Rebook', 'Blancos', 1300.00, true),
-            new Tenni('Nike Air Force One', 'Nike', 'Negros', 1500.00, true),
-            new Tenni('Nike Runner', 'Nike', 'Rojos', 1200.00, true)
-        ];
         this.color = 'blue';
         this.miMarca = 'Nike';
-        this.getMarcas();
     }
 
     ngOnInit(): void {
-        console.log(this.tennis);
-        console.log(this.marcas);
+        this.tennis = this._tennisService.getTennis();
+        // alert(this._tennisService.getTexto());
+        this.getMarcas();
     }
 
     getMarcas() {
